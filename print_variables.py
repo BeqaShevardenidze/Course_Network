@@ -7,7 +7,8 @@ def f_1_print_variables():
     {3} - input V1
     {4} - input V2
     {5} - Var Int
-    {6} - Home Work
+    {6} - Home Work 1
+    {7} - Home Work 2
     """)
     x = int(input(">>>> "))
     match x:
@@ -38,12 +39,19 @@ def f_1_print_variables():
             y = 'John'
             print(str(x) + " " + y)
         case 6:
-            print("\n------Home Work-------")
+            print("\n------Home Work 1-------")
             x = input('What is your name? ')
             y = input('What is your last name? ')
             print(f"U are: {x} {y}")
-
             # Stoped Time 27:33 
+        case 7:
+            print("\n------Home Work 2-------")
+            print("Thanks for using my program!")
+            pet_name = input("Enter your pet name! ")
+            born_sity = input("Where u Born? ")
+            nick_name = "@cyber" + pet_name
+            print(f"Your new handle and bio {nick_name} from {born_sity}")
+            # 35:16
 
 
 
