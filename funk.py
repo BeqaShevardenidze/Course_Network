@@ -44,6 +44,7 @@ def f_funk():
             def function():
                 print(f"Hello {name}")
             function()
+            # 1:11 
         case _:
             print("ERROR")
 
