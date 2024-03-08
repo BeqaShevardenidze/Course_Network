@@ -4,7 +4,9 @@ def f_funk():
     print("""
     _________________Func_________________
     {1} - first func  
-    {2} - fizzbuzz   
+    {2} - fizzbuzz funck
+    {3} - fizzbuzz funck argument
+    {4} - Home Work
     """)
     x = int(input(">>>> "))
     match x:
@@ -23,11 +25,27 @@ def f_funk():
                         print(f"{i} Buzz")
                     else:
                         print(i)
+            function()
+        case 3:
+            choise = int(input("what number u want to choise? "))
+            def function(choise):
+                for i in range(choise):
+                    if i % 3 == 0 and i % 5 == 0:
+                        print(f"{i} Fizzbuzz")
+                    elif i % 3 == 0:
+                        print(f"{i} Fizz")
+                    elif i % 5 == 0:
+                        print(f"{i} Buzz")
+                    else:
+                        print(i)
+            function(choise)
+        case 4:
+            name = input("what is your name? >>>>")
+            def function():
+                print(f"Hello {name}")
+            function()
         case _:
             print("ERROR")
-
-        # 1:04
-
 
 if __name__ == "__main__":
     f_funk()
