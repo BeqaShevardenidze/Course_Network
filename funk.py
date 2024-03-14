@@ -6,7 +6,9 @@ def f_funk():
     {1} - first func  
     {2} - fizzbuzz funck
     {3} - fizzbuzz funck argument
-    {4} - Home Work
+    {4} - Home Work V1
+    {5} - Home Work V2
+    {6} - Home Work ჩამოხრჩობანა
     """)
     x = int(input(">>>> "))
     match x:
@@ -44,7 +46,52 @@ def f_funk():
             def function():
                 print(f"Hello {name}")
             function()
-            # 1:11 
+        case 5:
+            name = input("what is your name?")
+            def greeting(name):
+                print(f"Hello {name}")
+            greeting()
+        case 6:
+            import os
+            import random
+            def Cls():
+                os.system("cls")
+            Cls()
+            arr = ['text', 'name', 'head', 'apple', 'banana']
+            print("hello This is game:")
+            def main():
+                i = random.randint(0, 4)
+                temp_word = arr[i]
+                word = []
+                old = []
+                for i in temp_word:
+                    word += i
+                word2 = []
+                for j in range(len(word)):
+                    word2 += '_'
+                
+                while word != word2:
+                    print(f"random word = {word}")
+                    print(f"random word = {word2}")
+                    num = -1
+                    x = input("Chaweret erti aso >>>> ")
+                    if x in word:
+                        for j in word:
+                            num += 1
+                            if j == x:
+                                word2[num] = x
+                        Cls()
+                        print(f"tqveni chawerili asoebi: {old}")
+                        print('aseti aso aris')
+                        if word == word2:
+                            Cls()
+                            print("Tqben moiget!!!")
+                    else:
+                        Cls()
+                        old.append(x)
+                        print(f"tqveni chawerili asoebi: {old}")
+                        print('aseti aso ar aris')
+            main()
         case _:
             print("ERROR")
 
