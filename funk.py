@@ -9,6 +9,7 @@ def f_funk():
     {4} - Home Work V1
     {5} - Home Work V2
     {6} - Home Work ჩამოხრჩობანა
+    {7} - Home Work ჩამოხრჩობანა Video
     """)
     x = int(input(">>>> "))
     match x:
@@ -72,7 +73,7 @@ def f_funk():
                 
                 while word != word2:
                     print(f"random word = {word}")
-                    print(f"random word = {word2}")
+                    print(f"your word = {word2}")
                     num = -1
                     x = input("Chaweret erti aso >>>> ")
                     if x in word:
@@ -85,13 +86,47 @@ def f_funk():
                         print('aseti aso aris')
                         if word == word2:
                             Cls()
-                            print("Tqben moiget!!!")
+                            print("Tqven moiget!!!")
                     else:
                         Cls()
                         old.append(x)
                         print(f"tqveni chawerili asoebi: {old}")
                         print('aseti aso ar aris')
             main()
+        case 7:
+            Cls()
+            import random
+            
+            print("welcome to Hangman!")
+            
+            words = ["hacker", "bounty", "random"]
+            secret_word = random.choice(words)
+            print(secret_word)
+            print("You get 5 Guesses")
+            display_word = []
+            for letter in secret_word:
+                display_word += "_"
+            print(display_word)
+
+            num = 0
+            game_over = False
+
+            while not game_over:
+                guess = input("Guess a letter ").lower()
+                for position in range(len(secret_word)):
+                    letter = secret_word[position]
+                    if letter == guess:
+                        display_word[position] = letter
+                if guess not in secret_word:
+                    num += 1
+                    if num >= 5:
+                        print("U Loser")
+                        game_over = True
+                print(display_word)
+
+                if "_" not in display_word:
+                    print("U Win")
+                    game_over = True
         case _:
             print("ERROR")
 
