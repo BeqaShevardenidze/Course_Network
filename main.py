@@ -4,6 +4,7 @@ from importlib import reload
 import print_variables
 import if_else_For_loop
 import funk
+import pyCharm
 def Cls():
     os.system("cls")
 Cls()
@@ -14,6 +15,7 @@ while True:
     {1} - Print & Variables
     {2} - If Else & For Loop
     {3} - Func
+    {4} - pyCharm install comands
     """)
 
     x = int(input(">>>> "))
@@ -34,6 +36,11 @@ while True:
             reload(funk)
             from funk import f_funk
             f_funk()
+        case 4:
+            Cls()
+            reload(pyCharm)
+            from pyCharm import f_pyCharm
+            f_pyCharm()
         case _:
             Cls()
             print("ERROR")

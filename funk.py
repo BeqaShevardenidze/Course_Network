@@ -1,4 +1,7 @@
 import main
+import os
+def Cls():
+    os.system("cls")
 
 def f_funk():
     print("""
@@ -55,8 +58,6 @@ def f_funk():
         case 6:
             import os
             import random
-            def Cls():
-                os.system("cls")
             Cls()
             arr = ['text', 'name', 'head', 'apple', 'banana']
             print("hello This is game:")
@@ -119,6 +120,8 @@ def f_funk():
                         display_word[position] = letter
                 if guess not in secret_word:
                     num += 1
+                    guesses_left = 5 - num
+                    print(f"U have {guesses_left} life")
                     if num >= 5:
                         print("U Loser")
                         game_over = True
